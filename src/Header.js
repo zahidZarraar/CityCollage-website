@@ -20,11 +20,13 @@ const Header = () => {
     >
       {/* Navbar */}
       <div className="flex justify-between items-center">
-        <img
+      <Link to='/'>
+      <img
           src="/Images/navbar_logo.png"
           className="h-12 md:h-16"
           alt="logo"
         />
+        </Link>
         {/* Right Corner Navbar */}
         <div className="hidden md:flex">
           <div
@@ -49,16 +51,16 @@ const Header = () => {
        text-[1.1rem]  font-semibold
        md:space-x-5 md:text-[1rem] lg:text-[1.2rem] md:space-y-0 md:flex"
       >
-        <Link to={() => navigate("/")}>
+        <Link to='/'>
           <HomeIcon style={{fontSize:'1.6rem'}} />
         </Link>
-        <NavLink to='/about' className="">
+        <Link to='/' className="">
           About Us
-        </NavLink>
+        </Link>
         <Link to={() => navigate("/")} className="">
           Programs
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to="/admissions" className="">
           Admissions
         </Link>
         <Link to={() => navigate("/")} className="">
@@ -101,25 +103,25 @@ const Header = () => {
 
       {/* Mobile Menu List */}
       <div className={status ? MenuClass : "hidden card"} id="navlinks">
-        <Link to={() => navigate("/")} className="mx-4">
+      <Link to='/' onClick={()=>setStatus(false)} className="mx-4">
           <HomeIcon style={{fontSize:'1.6rem'}} />
         </Link>
-        <Link to={() => navigate("/sfsf")} className="">
+        <Link to='/about' onClick={()=>setStatus(false)} className="">
           About Us
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
           Programs
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to="/admissions" onClick={()=>setStatus(false)} className="">
           Admissions
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
           Placements
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
           Facilities
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
           Campus Life
         </Link>
         <div className="flex-1 text-green-900 bg-gray-400
