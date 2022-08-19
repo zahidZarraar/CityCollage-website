@@ -2,9 +2,12 @@ import React, { useState } from "react";
 import LocationOnIcon from "@mui/icons-material/LocationOn";
 import HomeIcon from "@mui/icons-material/Home";
 import Typewriter from "typewriter-effect";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import { HashLink as Link } from "react-router-hash-link";
+// import { Link, animateScroll as scroll } from "react-scroll";
+import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   let [status, setStatus] = useState(false);
@@ -15,7 +18,7 @@ const Header = () => {
 
   return (
     <div
-      className="relative z-1000 container 
+    id='navbar' className="relative z-1000 container 
     mx-auto p-4 flex flex-row justify-between md:flex-col"
     >
       {/* Navbar */}
@@ -54,28 +57,29 @@ const Header = () => {
         <Link to='/'>
           <HomeIcon style={{fontSize:'1.6rem'}} />
         </Link>
-        <Link to='/' className="">
+        <AnchorLink className="hover:text-green-900" href='#about'>
           About Us
-        </Link>
-        <Link to={() => navigate("/")} className="">
+        </AnchorLink>
+        <AnchorLink className="hover:text-green-900" href='#programs'>
           Programs
-        </Link>
-        <Link to="/admissions" className="">
+        </AnchorLink>
+        <Link to="/admissions" className="hover:text-green-900">
           Admissions
         </Link>
-        <Link to={() => navigate("/")} className="">
+        <AnchorLink className="hover:text-green-900" href='#newsandevents'>
+          News&Events
+        </AnchorLink>
+        <AnchorLink href='#placements' className="hover:text-green-900">
           Placements
-        </Link>
-        <Link to={() => navigate("/")} className="">
-          Facilities
-        </Link>
-        <Link to={() => navigate("/")} className="">
+        </AnchorLink>
+        <AnchorLink href='#campuslife' className="hover:text-green-900">
           Campus Life
-        </Link>
+        </AnchorLink>
+
         <div className="flex-1 text-green-900 font-bold">
           <Typewriter
             options={{
-              strings: ["Innovation", "Design", "Creation"],
+              strings: ["CET:E109", "CMD-K:E037", "VTU Collage"],
               autoStart: true,
               delay: 240,
               pauseFor: 1200,
@@ -106,35 +110,37 @@ const Header = () => {
       <Link to='/' onClick={()=>setStatus(false)} className="mx-4">
           <HomeIcon style={{fontSize:'1.6rem'}} />
         </Link>
-        <Link to='/about' onClick={()=>setStatus(false)} className="">
+        <AnchorLink onClick={()=>setStatus(false)} href='#about'>
           About Us
-        </Link>
-        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
+        </AnchorLink>
+        <AnchorLink onClick={()=>setStatus(false)} href='#programs'>
           Programs
-        </Link>
-        <Link to="/admissions" onClick={()=>setStatus(false)} className="">
+        </AnchorLink>
+        <Link onClick={()=>setStatus(false)} to="/admissions" className="">
           Admissions
         </Link>
-        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
+        <AnchorLink onClick={()=>setStatus(false)} href='#newsandevents'>
+          News&Events
+        </AnchorLink>
+        <AnchorLink onClick={()=>setStatus(false)} href='#placements'>
           Placements
-        </Link>
-        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
-          Facilities
-        </Link>
-        <Link to={() => navigate("/")} onClick={()=>setStatus(false)} className="">
+        </AnchorLink>
+        <AnchorLink onClick={()=>setStatus(false)} href='#campuslife'>
           Campus Life
-        </Link>
+        </AnchorLink>
         <div className="flex-1 text-green-900 bg-gray-400
         rounded-lg font-bold">
+          <a href='https://vtu.ac.in/' target="_blank" rel="noreferrer">
           <Typewriter
             options={{
-              strings: ["Innovation", "Design", "Creation"],
+              strings: ["CET:E109", "CMD-K:E037", "VTU Affiliated Collage"],
               autoStart: true,
               delay: 240,
               pauseFor: 1200,
               loop: true,
             }}
           />
+          </a>
         </div>
       </div>
     </div>

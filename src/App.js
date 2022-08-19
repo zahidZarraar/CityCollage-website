@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route  ,BrowserRouter as Router,} from "react-router-dom";
+import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import Header from "./Header";
 import Announcement from "./Announcement";
 import Hero from "./Hero";
@@ -13,15 +13,14 @@ import Admissions from "./Admissions";
 import { Fragment } from "react";
 import CampusLife from "./CampusLife";
 import Maps from "./Maps";
+import Newsandevents from "./Newsandevents";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
-
     <div className="App">
-      <SmoothScroll />
+      {/* <SmoothScroll /> */}
       <Routes>
-
-      <Route path='/admissions' element={<><Header /> <Admissions /> <Footer/></>} />
         <Route
           path="/"
           element={
@@ -32,10 +31,20 @@ function App() {
               <About />
               <Programs />
               <Departments />
+              <Newsandevents />
               <CampusLife />
               <Placements />
               <Maps />
               <Footer />
+            </>
+          }
+        />
+
+        <Route
+          path="/admissions"
+          element={
+            <>
+              <Header /> <Admissions /> <Footer />
             </>
           }
         />

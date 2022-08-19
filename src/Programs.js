@@ -2,7 +2,7 @@ import React from "react";
 
 const Programs = () => {
   return (
-    <div className="flex justify-center w-full ">
+    <div id='programs' className="flex justify-center w-full ">
       {/* main */}
       <div
         className="container flex flex-col

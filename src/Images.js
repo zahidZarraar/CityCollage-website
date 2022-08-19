@@ -20,7 +20,17 @@ import p12 from './placementImages/p12.png';
 import p13 from './placementImages/p13.png';
 import p14 from './placementImages/p14.png';
 import p15 from './placementImages/p15.png';
+// NE Images
+import ne1 from './NEImages/ne1.jpg';
+import ne2 from './NEImages/ne2.jpg';
+import ne3 from './NEImages/ne3.jpg';
+import ne4 from './NEImages/ne4.jpg';
+import ne5 from './NEImages/ne5.jpg';
+import ne6 from './NEImages/ne6.jpg';
+import ne7 from './NEImages/ne7.jpg';
+import ne8 from './NEImages/ne8.jpg';
 
 
 export const SliderImages = [ai, ce, collage, group, students];
 export const placementImages = [p1,p2,p3,p4,p5,p6,p7,p8,p9,p10,p11,p12,p13,p14,p15];
+export const NeImages = [ne1,ne2,ne3,ne4,ne5,ne6,ne7,ne8];

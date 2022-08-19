@@ -11,6 +11,9 @@ module.exports = {
       xl:'1440px'
     },
     extend: {
+      backgroundImage: {
+        'NE': "url('../public/Images/NE.jpg')",
+      },
       colors : {
         brightRed: 'hsl(12, 88%, 59%)',
         brightRedLight: 'hsl(12, 88%, 69%)',

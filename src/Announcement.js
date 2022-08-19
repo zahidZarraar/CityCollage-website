@@ -1,8 +1,9 @@
 import React from 'react'
+import Marquee from 'react-fast-marquee'
 
 const Announcement = () => {
   return (
-    <div className="flex items-center bg-[#f4f0eb]">
+    <div  className="flex items-center bg-[#f4f0eb]">
     <div className="flex 
     items-center justify-end md:w-1/6">
     <div className="bg-black text-right 
@@ -17,15 +18,16 @@ const Announcement = () => {
             border-l-[10px] border-l-black
             border-b-[8px] border-b-transparent"></div>
       </div>
-      <marquee className='w-[70%] bg-[#f4f0eb] 
-      text-gray-600 p-2 cursor-pointer'>
+      <Marquee gradient={false} speed={50} pauseOnHover className='w-[70%] bg-[#f4f0eb] 
+      text-gray-600 p-2 cursor-pointer'
+      onMouseOver={()=>this.stop()} >
         Admissions Open for the Academic Year 2021-22.  
       <span className="h-full text-extrabold mx-6 text-[#00692e]"> | </span>
       B.E. in  Computer Science & Engineering/Information Science & Engineering /Artificial Intelligence & Machine Learning /Electronics & Communication Engineering /Mechanical Engineering /Civil Engineering  
       <span className="h-full text-extrabold mx-6 text-[#00692e]"> | </span>
       Contact 9880411361, 9880411363, 9880411364, 7349032929, admissions@cityengineeringcollege.ac.in
       <span className="h-full text-extrabold mx-6 text-[#00692e]"> | </span>
-      </marquee>
+      </Marquee>
   </div>
   )
 }

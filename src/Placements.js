@@ -39,7 +39,7 @@ var settings = {
 
 const Placements = () => {
   return (
-    <div className="p-10 py-16 bg-[#0b5223] text-white flex  flex-col space-y-4">
+    <div id='placements' className="p-10 py-16 bg-[#0b5223] text-white flex  flex-col space-y-4">
       <h2
         className="font-bold text-center text-[1.3rem]
          md:text-[1.7rem] border-b-[0.1px] py-4 md:border-0 "

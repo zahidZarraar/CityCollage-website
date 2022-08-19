@@ -2,7 +2,7 @@ import React from "react";
 
 const CampusLife = () => {
   return (
-    <div className="container flex mx-auto flex-col p-10">
+    <div id='campuslife' className="container flex mx-auto flex-col p-10">
       <div className="flex flex-col">
         {/* Headline */}
         <div
