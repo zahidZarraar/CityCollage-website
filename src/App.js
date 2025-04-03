@@ -1,20 +1,17 @@
-import "./App.css";
-import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
-import Header from "./Header";
-import Announcement from "./Announcement";
-import Hero from "./Hero";
+import { Route, Routes } from "react-router-dom";
 import About from "./About";
-import Footer from "./Footer";
-import SmoothScroll from "./SmoothScroll";
-import Departments from "./Departments";
-import Placements from "./Placements";
-import Programs from "./Programs";
 import Admissions from "./Admissions";
-import { Fragment } from "react";
+import Announcement from "./Announcement";
+import "./App.css";
 import CampusLife from "./CampusLife";
+import Departments from "./Departments";
+import Footer from "./Footer";
+import Header from "./Header";
+import Hero from "./Hero";
 import Maps from "./Maps";
 import Newsandevents from "./Newsandevents";
-import { BrowserRouter } from "react-router-dom";
+import Placements from "./Placements";
+import Programs from "./Programs";
 
 function App() {
   return (
