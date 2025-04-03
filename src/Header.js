@@ -1,34 +1,34 @@
-import React, { useState } from "react";
-import LocationOnIcon from "@mui/icons-material/LocationOn";
+import CloseIcon from "@mui/icons-material/Close";
 import HomeIcon from "@mui/icons-material/Home";
-import Typewriter from "typewriter-effect";
-import { useNavigate } from "react-router-dom";
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
+import LocationOnIcon from "@mui/icons-material/LocationOn";
+import MenuIcon from "@mui/icons-material/Menu";
+import React, { useState } from "react";
 import { HashLink as Link } from "react-router-hash-link";
+import Typewriter from "typewriter-effect";
 // import { Link, animateScroll as scroll } from "react-scroll";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 
 const Header = () => {
   let [status, setStatus] = useState(false);
-  const navigate = useNavigate();
 
   //! Menu Class
-  let MenuClass = "absolute z-50 top-[97%] shadow-lg left-0 right-6 drop-shadow-md flex flex-col space-x-4 self-end sm:w-auto mt-10 font-bold py-6 space-y-5 rounded-sm bg-white justify-center md:hidden";
+  let MenuClass =
+    "absolute z-50 top-[97%] shadow-lg left-0 right-6 drop-shadow-md flex flex-col space-x-4 self-end sm:w-auto mt-10 font-bold py-6 space-y-5 rounded-sm bg-white justify-center md:hidden";
 
   return (
     <div
-    id='navbar' className="relative z-1000 container 
+      id="navbar"
+      className="relative z-1000 container 
     mx-auto p-4 flex flex-row justify-between md:flex-col"
     >
       {/* Navbar */}
       <div className="flex justify-between items-center">
-      <Link to='/'>
-      <img
-          src="/Images/navbar_logo.png"
-          className="h-12 md:h-16"
-          alt="logo"
-        />
+        <Link to="/">
+          <img
+            src="/Images/navbar_logo.png"
+            className="h-12 md:h-16"
+            alt="logo"
+          />
         </Link>
         {/* Right Corner Navbar */}
         <div className="hidden md:flex">
@@ -54,25 +54,25 @@ const Header = () => {
        text-[1.1rem]  font-semibold
        md:space-x-5 md:text-[1rem] lg:text-[1.2rem] md:space-y-0 md:flex"
       >
-        <Link to='/'>
-          <HomeIcon style={{fontSize:'1.6rem'}} />
+        <Link to="/">
+          <HomeIcon style={{ fontSize: "1.6rem" }} />
         </Link>
-        <AnchorLink className="hover:text-green-900" href='#about'>
+        <AnchorLink className="hover:text-green-900" href="#about">
           About Us
         </AnchorLink>
-        <AnchorLink className="hover:text-green-900" href='#programs'>
+        <AnchorLink className="hover:text-green-900" href="#programs">
           Programs
         </AnchorLink>
         <Link to="/admissions" className="hover:text-green-900">
           Admissions
         </Link>
-        <AnchorLink className="hover:text-green-900" href='#newsandevents'>
+        <AnchorLink className="hover:text-green-900" href="#newsandevents">
           News&Events
         </AnchorLink>
-        <AnchorLink href='#placements' className="hover:text-green-900">
+        <AnchorLink href="#placements" className="hover:text-green-900">
           Placements
         </AnchorLink>
-        <AnchorLink href='#campuslife' className="hover:text-green-900">
+        <AnchorLink href="#campuslife" className="hover:text-green-900">
           Campus Life
         </AnchorLink>
 
@@ -107,39 +107,41 @@ const Header = () => {
 
       {/* Mobile Menu List */}
       <div className={status ? MenuClass : "hidden card"} id="navlinks">
-      <Link to='/' onClick={()=>setStatus(false)} className="mx-4">
-          <HomeIcon style={{fontSize:'1.6rem'}} />
+        <Link to="/" onClick={() => setStatus(false)} className="mx-4">
+          <HomeIcon style={{ fontSize: "1.6rem" }} />
         </Link>
-        <AnchorLink onClick={()=>setStatus(false)} href='#about'>
+        <AnchorLink onClick={() => setStatus(false)} href="#about">
           About Us
         </AnchorLink>
-        <AnchorLink onClick={()=>setStatus(false)} href='#programs'>
+        <AnchorLink onClick={() => setStatus(false)} href="#programs">
           Programs
         </AnchorLink>
-        <Link onClick={()=>setStatus(false)} to="/admissions" className="">
+        <Link onClick={() => setStatus(false)} to="/admissions" className="">
           Admissions
         </Link>
-        <AnchorLink onClick={()=>setStatus(false)} href='#newsandevents'>
+        <AnchorLink onClick={() => setStatus(false)} href="#newsandevents">
           News&Events
         </AnchorLink>
-        <AnchorLink onClick={()=>setStatus(false)} href='#placements'>
+        <AnchorLink onClick={() => setStatus(false)} href="#placements">
           Placements
         </AnchorLink>
-        <AnchorLink onClick={()=>setStatus(false)} href='#campuslife'>
+        <AnchorLink onClick={() => setStatus(false)} href="#campuslife">
           Campus Life
         </AnchorLink>
-        <div className="flex-1 text-green-900 bg-gray-400
-        rounded-lg font-bold">
-          <a href='https://vtu.ac.in/' target="_blank" rel="noreferrer">
-          <Typewriter
-            options={{
-              strings: ["CET:E109", "CMD-K:E037", "VTU Affiliated Collage"],
-              autoStart: true,
-              delay: 240,
-              pauseFor: 1200,
-              loop: true,
-            }}
-          />
+        <div
+          className="flex-1 text-green-900 bg-gray-400
+        rounded-lg font-bold"
+        >
+          <a href="https://vtu.ac.in/" target="_blank" rel="noreferrer">
+            <Typewriter
+              options={{
+                strings: ["CET:E109", "CMD-K:E037", "VTU Affiliated Collage"],
+                autoStart: true,
+                delay: 240,
+                pauseFor: 1200,
+                loop: true,
+              }}
+            />
           </a>
         </div>
       </div>
